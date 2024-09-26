@@ -1,0 +1,921 @@
+DIA-NN 1.8.1 (Data-Independent Acquisition by Neural Networks)
+Compiled on Apr 14 2022 15:31:19
+Current date and time: Fri Aug  9 21:53:16 2024
+CPU: GenuineIntel Intel(R) Xeon(R) CPU E5-2696 v4 @ 2.20GHz
+SIMD instructions: AVX AVX2 FMA SSE4.1 SSE4.2 
+Logical CPU cores: 44
+diann.exe --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_1.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_2.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_3.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_4.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_5.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_6.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_1.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_2.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_3.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_4.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_5.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_1.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_2.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_3.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_4.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_5.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_6.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_7.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_8.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_1.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_2.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_3.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_4.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_5.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_6.raw  --f E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_7.raw  --lib  --threads 44 --verbose 1 --out E:\dongzhen\0808\Final_used_files_libfree_result_2\report.tsv --qvalue 0.01 --matrices --predictor --fasta Y:\members\Dongzhen\Library_and_FASTA\swissprot_mouse_20240805_17217_dongz.fasta --fasta-search --min-fr-mz 150 --max-fr-mz 2000 --met-excision --cut K*,R* --missed-cleavages 2 --min-pep-len 7 --max-pep-len 50 --min-pr-mz 400 --max-pr-mz 800 --min-pr-charge 2 --max-pr-charge 4 --unimod4 --var-mods 2 --var-mod UniMod:35,15.994915,M --reanalyse --relaxed-prot-inf --smart-profiling --peak-center --no-ifs-removal --relaxed-prot-inf 
+
+Thread number set to 44
+Output will be filtered at 0.01 FDR
+Precursor/protein x samples expression level matrices will be saved along with the main report
+Deep learning will be used to generate a new in silico spectral library from peptides provided
+Library-free search enabled
+Min fragment m/z set to 150
+Max fragment m/z set to 2000
+N-terminal methionine excision enabled
+In silico digest will involve cuts at K*,R*
+Maximum number of missed cleavages set to 2
+Min peptide length set to 7
+Max peptide length set to 50
+Min precursor m/z set to 400
+Max precursor m/z set to 800
+Min precursor charge set to 2
+Max precursor charge set to 4
+Cysteine carbamidomethylation enabled as a fixed modification
+Maximum number of variable modifications set to 2
+Modification UniMod:35 with mass delta 15.9949 at M will be considered as variable
+A spectral library will be created from the DIA runs and used to reanalyse them; .quant files will only be saved to disk during the first step
+Highly heuristic protein grouping will be used, to reduce the number of protein groups obtained; this mode is recommended for benchmarking protein ID numbers; use with caution for anything else
+When generating a spectral library, in silico predicted spectra will be retained if deemed more reliable than experimental ones
+Fixed-width center of each elution peak will be used for quantification
+Interference removal from fragment elution curves disabled
+Highly heuristic protein grouping will be used, to reduce the number of protein groups obtained; this mode is recommended for benchmarking protein ID numbers; use with caution for anything else
+DIA-NN will optimise the mass accuracy automatically using the first run in the experiment. This is useful primarily for quick initial analyses, when it is not yet known which mass accuracy setting works best for a particular acquisition scheme.
+Exclusion of fragments shared between heavy and light peptides from quantification is not supported in FASTA digest mode - disabled; to enable, generate an in silico predicted spectral library and analyse with this library
+
+26 files will be processed
+[0:00] Loading FASTA Y:\members\Dongzhen\Library_and_FASTA\swissprot_mouse_20240805_17217_dongz.fasta
+[0:10] Processing FASTA
+[0:35] Assembling elution groups
+[0:43] 3691902 precursors generated
+[0:43] Gene names missing for some isoforms
+[0:43] Library contains 17202 proteins, and 16863 genes
+[0:44] [0:53] [36:17] [45:30] [45:35] [45:40] Saving the library to lib.predicted.speclib
+[45:48] Initialising library
+
+[45:51] First pass: generating a spectral library from DIA data
+[45:51] File #1/26
+[45:51] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_1.raw
+[46:37] 3688879 library precursors are potentially detectable
+[46:37] Processing...
+[57:30] RT window set to 1.09022
+[57:30] Peak width: 3.272
+[57:30] Scan window radius set to 7
+[57:30] Recommended MS1 mass accuracy setting: 7.4921 ppm
+[69:03] Optimised mass accuracy: 11.4506 ppm
+[75:51] Removing low confidence identifications
+[75:51] Removing interfering precursors
+[75:55] Training neural networks: 27752 targets, 16024 decoys
+[76:01] Number of IDs at 0.01 FDR: 10169
+[76:02] Calculating protein q-values
+[76:02] Number of genes identified at 1% FDR: 2290 (precursor-level), 1995 (protein-level) (inference performed using proteotypic peptides only)
+[76:02] Quantification
+[76:06] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_1.raw.quant.
+
+[76:08] File #2/26
+[76:08] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_2.raw
+[76:56] 3688879 library precursors are potentially detectable
+[76:57] Processing...
+[87:58] RT window set to 1.22997
+[87:59] Recommended MS1 mass accuracy setting: 6.97055 ppm
+[96:28] Removing low confidence identifications
+[96:28] Removing interfering precursors
+[96:32] Training neural networks: 24138 targets, 14043 decoys
+[96:39] Number of IDs at 0.01 FDR: 8104
+[96:40] Calculating protein q-values
+[96:40] Number of genes identified at 1% FDR: 1990 (precursor-level), 1641 (protein-level) (inference performed using proteotypic peptides only)
+[96:40] Quantification
+[96:44] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_2.raw.quant.
+
+[96:46] File #3/26
+[96:46] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_3.raw
+[97:45] 3688879 library precursors are potentially detectable
+[97:46] Processing...
+[123:13] RT window set to 1.27239
+[123:14] Recommended MS1 mass accuracy setting: 10.1117 ppm
+[136:38] Removing low confidence identifications
+[136:39] Removing interfering precursors
+[136:40] Training neural networks: 18086 targets, 10739 decoys
+[136:43] Number of IDs at 0.01 FDR: 5139
+[136:43] Calculating protein q-values
+[136:43] Number of genes identified at 1% FDR: 1677 (precursor-level), 1563 (protein-level) (inference performed using proteotypic peptides only)
+[136:43] Quantification
+[136:44] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_3.raw.quant.
+
+[136:47] File #4/26
+[136:47] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_4.raw
+[137:38] 3688879 library precursors are potentially detectable
+[137:39] Processing...
+[151:11] RT window set to 1.12933
+[151:11] Recommended MS1 mass accuracy setting: 4.1738 ppm
+[157:46] Removing low confidence identifications
+[157:46] Removing interfering precursors
+[157:51] Training neural networks: 21838 targets, 12544 decoys
+[157:57] Number of IDs at 0.01 FDR: 8176
+[157:57] Calculating protein q-values
+[157:58] Number of genes identified at 1% FDR: 1960 (precursor-level), 1803 (protein-level) (inference performed using proteotypic peptides only)
+[157:58] Quantification
+[158:01] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_4.raw.quant.
+
+[158:04] File #5/26
+[158:04] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_5.raw
+[158:51] 3688879 library precursors are potentially detectable
+[158:51] Processing...
+[187:20] RT window set to 1.15495
+[187:20] Recommended MS1 mass accuracy setting: 3.10514 ppm
+[194:44] Removing low confidence identifications
+[194:44] Removing interfering precursors
+[194:48] Training neural networks: 13370 targets, 7837 decoys
+[194:54] Number of IDs at 0.01 FDR: 4374
+[194:54] Calculating protein q-values
+[194:55] Number of genes identified at 1% FDR: 1204 (precursor-level), 1068 (protein-level) (inference performed using proteotypic peptides only)
+[194:55] Quantification
+[194:57] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_5.raw.quant.
+
+[195:00] File #6/26
+[195:00] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_6.raw
+[195:46] 3688879 library precursors are potentially detectable
+[195:46] Processing...
+[204:43] RT window set to 1.05116
+[204:43] Recommended MS1 mass accuracy setting: 3.55375 ppm
+[210:10] Removing low confidence identifications
+[210:10] Removing interfering precursors
+[210:13] Training neural networks: 26994 targets, 16265 decoys
+[210:19] Number of IDs at 0.01 FDR: 9424
+[210:20] Calculating protein q-values
+[210:20] Number of genes identified at 1% FDR: 2077 (precursor-level), 1898 (protein-level) (inference performed using proteotypic peptides only)
+[210:20] Quantification
+[210:24] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_6.raw.quant.
+
+[210:26] File #7/26
+[210:26] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_1.raw
+[211:20] 3688879 library precursors are potentially detectable
+[211:21] Processing...
+[266:02] RT window set to 1.39165
+[266:03] Recommended MS1 mass accuracy setting: 5.82183 ppm
+[282:15] Removing low confidence identifications
+[282:15] Removing interfering precursors
+[282:17] Training neural networks: 2380 targets, 1446 decoys
+[282:18] Number of IDs at 0.01 FDR: 480
+[282:19] Calculating protein q-values
+[282:19] Number of genes identified at 1% FDR: 184 (precursor-level), 152 (protein-level) (inference performed using proteotypic peptides only)
+[282:19] Quantification
+[282:20] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_1.raw.quant.
+
+[282:23] File #8/26
+[282:23] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_2.raw
+[283:21] 3688879 library precursors are potentially detectable
+[283:21] Processing...
+[341:02] RT window set to 1.32093
+[341:03] Recommended MS1 mass accuracy setting: 6.43353 ppm
+[357:02] Removing low confidence identifications
+[357:03] Removing interfering precursors
+[357:08] Training neural networks: 1584 targets, 988 decoys
+[357:14] Number of IDs at 0.01 FDR: 379
+[357:14] Calculating protein q-values
+[357:14] Number of genes identified at 1% FDR: 117 (precursor-level), 0 (protein-level) (inference performed using proteotypic peptides only)
+[357:14] Quantification
+[357:18] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_2.raw.quant.
+
+[357:21] File #9/26
+[357:21] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_3.raw
+[358:22] 3688879 library precursors are potentially detectable
+[358:23] Processing...
+[415:40] RT window set to 1.41334
+[415:41] Recommended MS1 mass accuracy setting: 7.45884 ppm
+[432:26] Removing low confidence identifications
+[432:27] Removing interfering precursors
+[432:28] Training neural networks: 4663 targets, 2806 decoys
+[432:30] Number of IDs at 0.01 FDR: 914
+[432:30] Calculating protein q-values
+[432:30] Number of genes identified at 1% FDR: 318 (precursor-level), 245 (protein-level) (inference performed using proteotypic peptides only)
+[432:30] Quantification
+[432:31] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_3.raw.quant.
+
+[432:34] File #10/26
+[432:34] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_4.raw
+[433:24] 3688879 library precursors are potentially detectable
+[433:25] Processing...
+[487:20] RT window set to 1.30222
+[487:21] Recommended MS1 mass accuracy setting: 7.01288 ppm
+[501:36] Removing low confidence identifications
+[501:37] Removing interfering precursors
+[501:41] Training neural networks: 2273 targets, 1383 decoys
+[501:47] Number of IDs at 0.01 FDR: 450
+[501:47] Calculating protein q-values
+[501:48] Number of genes identified at 1% FDR: 127 (precursor-level), 0 (protein-level) (inference performed using proteotypic peptides only)
+[501:48] Quantification
+[501:51] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_4.raw.quant.
+
+[501:54] File #11/26
+[501:54] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_5.raw
+[502:39] 3688879 library precursors are potentially detectable
+[502:39] Processing...
+[526:28] Cannot perform mass calibration, too few confidently identified precursors
+[526:28] Cannot perform MS1 mass calibration, too few confidently identified precursors
+[550:26] RT window set to 11.1425
+[550:26] Cannot perform mass calibration, too few confidently identified precursors
+[550:26] Cannot perform MS1 mass calibration, too few confidently identified precursors
+[610:19] Removing low confidence identifications
+[610:19] Removing interfering precursors
+[610:23] Training neural networks: 843 targets, 576 decoys
+[610:29] Number of IDs at 0.01 FDR: 174
+[610:29] Calculating protein q-values
+[610:30] Number of genes identified at 1% FDR: 52 (precursor-level), 0 (protein-level) (inference performed using proteotypic peptides only)
+[610:30] Quantification
+[610:36] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_5.raw.quant.
+
+[610:38] File #12/26
+[610:38] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_1.raw
+[611:39] 3688879 library precursors are potentially detectable
+[611:40] Processing...
+[631:04] RT window set to 1.16537
+[631:04] Recommended MS1 mass accuracy setting: 11.6633 ppm
+[642:03] Removing low confidence identifications
+[642:04] Removing interfering precursors
+[642:08] Training neural networks: 15931 targets, 8904 decoys
+[642:14] Number of IDs at 0.01 FDR: 5482
+[642:14] Calculating protein q-values
+[642:15] Number of genes identified at 1% FDR: 1325 (precursor-level), 1208 (protein-level) (inference performed using proteotypic peptides only)
+[642:15] Quantification
+[642:19] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_1.raw.quant.
+
+[642:21] File #13/26
+[642:21] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_2.raw
+[643:15] 3688879 library precursors are potentially detectable
+[643:16] Processing...
+[650:22] RT window set to 1.19184
+[650:23] Recommended MS1 mass accuracy setting: 2.71167 ppm
+[657:37] Removing low confidence identifications
+[657:37] Removing interfering precursors
+[657:39] Training neural networks: 37964 targets, 22274 decoys
+[657:43] Number of IDs at 0.01 FDR: 14175
+[657:43] Calculating protein q-values
+[657:43] Number of genes identified at 1% FDR: 2695 (precursor-level), 2372 (protein-level) (inference performed using proteotypic peptides only)
+[657:44] Quantification
+[657:44] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_2.raw.quant.
+
+[657:47] File #14/26
+[657:47] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_3.raw
+[659:15] 3688879 library precursors are potentially detectable
+[659:16] Processing...
+[701:02] RT window set to 1.13853
+[701:03] Recommended MS1 mass accuracy setting: 3.21381 ppm
+[722:10] Removing low confidence identifications
+[722:11] Removing interfering precursors
+[722:12] Training neural networks: 15305 targets, 8905 decoys
+[722:15] Number of IDs at 0.01 FDR: 4446
+[722:15] Calculating protein q-values
+[722:15] Number of genes identified at 1% FDR: 1411 (precursor-level), 1139 (protein-level) (inference performed using proteotypic peptides only)
+[722:15] Quantification
+[722:17] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_3.raw.quant.
+
+[722:20] File #15/26
+[722:20] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_4.raw
+[723:14] 3688879 library precursors are potentially detectable
+[723:15] Processing...
+[729:08] RT window set to 1.12719
+[729:09] Recommended MS1 mass accuracy setting: 3.05069 ppm
+[736:23] Removing low confidence identifications
+[736:23] Removing interfering precursors
+[736:28] Training neural networks: 38863 targets, 22837 decoys
+[736:34] Number of IDs at 0.01 FDR: 16495
+[736:34] Calculating protein q-values
+[736:35] Number of genes identified at 1% FDR: 3020 (precursor-level), 2656 (protein-level) (inference performed using proteotypic peptides only)
+[736:35] Quantification
+[736:37] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_4.raw.quant.
+
+[736:39] File #16/26
+[736:39] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_5.raw
+[737:33] 3688879 library precursors are potentially detectable
+[737:33] Processing...
+[741:49] RT window set to 1.15824
+[741:50] Recommended MS1 mass accuracy setting: 4.63444 ppm
+[748:23] Removing low confidence identifications
+[748:24] Removing interfering precursors
+[748:26] Training neural networks: 44830 targets, 27064 decoys
+[748:30] Number of IDs at 0.01 FDR: 19032
+[748:30] Calculating protein q-values
+[748:30] Number of genes identified at 1% FDR: 3290 (precursor-level), 2971 (protein-level) (inference performed using proteotypic peptides only)
+[748:31] Quantification
+[748:32] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_5.raw.quant.
+
+[748:34] File #17/26
+[748:34] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_6.raw
+[749:23] 3688879 library precursors are potentially detectable
+[749:24] Processing...
+[754:35] RT window set to 1.20168
+[754:36] Recommended MS1 mass accuracy setting: 4.50308 ppm
+[761:34] Removing low confidence identifications
+[761:35] Removing interfering precursors
+[761:39] Training neural networks: 41478 targets, 24935 decoys
+[761:44] Number of IDs at 0.01 FDR: 17062
+[761:45] Calculating protein q-values
+[761:45] Number of genes identified at 1% FDR: 3126 (precursor-level), 2810 (protein-level) (inference performed using proteotypic peptides only)
+[761:45] Quantification
+[761:48] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_6.raw.quant.
+
+[761:50] File #18/26
+[761:50] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_7.raw
+[762:37] 3688879 library precursors are potentially detectable
+[762:37] Processing...
+[769:24] RT window set to 1.16459
+[769:24] Recommended MS1 mass accuracy setting: 6.36004 ppm
+[777:31] Removing low confidence identifications
+[777:31] Removing interfering precursors
+[777:34] Training neural networks: 39455 targets, 23421 decoys
+[777:37] Number of IDs at 0.01 FDR: 15360
+[777:37] Calculating protein q-values
+[777:38] Number of genes identified at 1% FDR: 2844 (precursor-level), 2455 (protein-level) (inference performed using proteotypic peptides only)
+[777:38] Quantification
+[777:39] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_7.raw.quant.
+
+[777:41] File #19/26
+[777:41] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_8.raw
+[778:35] 3688879 library precursors are potentially detectable
+[778:36] Processing...
+[786:09] RT window set to 1.21218
+[786:10] Recommended MS1 mass accuracy setting: 6.8261 ppm
+[795:01] Removing low confidence identifications
+[795:01] Removing interfering precursors
+[795:06] Training neural networks: 36156 targets, 20888 decoys
+[795:12] Number of IDs at 0.01 FDR: 14086
+[795:12] Calculating protein q-values
+[795:13] Number of genes identified at 1% FDR: 2646 (precursor-level), 2368 (protein-level) (inference performed using proteotypic peptides only)
+[795:13] Quantification
+[795:17] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_8.raw.quant.
+
+[795:19] File #20/26
+[795:19] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_1.raw
+[796:11] 3688879 library precursors are potentially detectable
+[796:12] Processing...
+[802:22] RT window set to 1.14116
+[802:22] Recommended MS1 mass accuracy setting: 6.48802 ppm
+[810:01] Removing low confidence identifications
+[810:01] Removing interfering precursors
+[810:04] Training neural networks: 39743 targets, 23887 decoys
+[810:07] Number of IDs at 0.01 FDR: 14336
+[810:07] Calculating protein q-values
+[810:08] Number of genes identified at 1% FDR: 2950 (precursor-level), 2600 (protein-level) (inference performed using proteotypic peptides only)
+[810:08] Quantification
+[810:09] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_1.raw.quant.
+
+[810:11] File #21/26
+[810:11] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_2.raw
+[811:05] 3688879 library precursors are potentially detectable
+[811:06] Processing...
+[815:25] RT window set to 1.09787
+[815:26] Recommended MS1 mass accuracy setting: 5.91088 ppm
+[822:19] Removing low confidence identifications
+[822:19] Removing interfering precursors
+[822:22] Training neural networks: 47588 targets, 28499 decoys
+[822:26] Number of IDs at 0.01 FDR: 19190
+[822:26] Calculating protein q-values
+[822:27] Number of genes identified at 1% FDR: 3353 (precursor-level), 2931 (protein-level) (inference performed using proteotypic peptides only)
+[822:27] Quantification
+[822:28] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_2.raw.quant.
+
+[822:30] File #22/26
+[822:30] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_3.raw
+[823:19] 3688879 library precursors are potentially detectable
+[823:19] Processing...
+[829:21] RT window set to 1.12576
+[829:22] Recommended MS1 mass accuracy setting: 5.15891 ppm
+[836:29] Removing low confidence identifications
+[836:30] Removing interfering precursors
+[836:32] Training neural networks: 41144 targets, 24452 decoys
+[836:35] Number of IDs at 0.01 FDR: 15940
+[836:36] Calculating protein q-values
+[836:36] Number of genes identified at 1% FDR: 2948 (precursor-level), 2584 (protein-level) (inference performed using proteotypic peptides only)
+[836:36] Quantification
+[836:37] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_3.raw.quant.
+
+[836:39] File #23/26
+[836:39] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_4.raw
+[837:34] 3688879 library precursors are potentially detectable
+[837:35] Processing...
+[847:02] RT window set to 1.13895
+[847:03] Recommended MS1 mass accuracy setting: 6.73238 ppm
+[854:33] Removing low confidence identifications
+[854:33] Removing interfering precursors
+[854:35] Training neural networks: 30079 targets, 17536 decoys
+[854:38] Number of IDs at 0.01 FDR: 10942
+[854:38] Calculating protein q-values
+[854:38] Number of genes identified at 1% FDR: 2195 (precursor-level), 1910 (protein-level) (inference performed using proteotypic peptides only)
+[854:38] Quantification
+[854:39] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_4.raw.quant.
+
+[854:42] File #24/26
+[854:42] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_5.raw
+[855:44] 3688879 library precursors are potentially detectable
+[855:44] Processing...
+[867:16] RT window set to 1.11516
+[867:17] Recommended MS1 mass accuracy setting: 10.2034 ppm
+[877:45] Removing low confidence identifications
+[877:46] Removing interfering precursors
+[877:50] Training neural networks: 26817 targets, 15179 decoys
+[877:57] Number of IDs at 0.01 FDR: 10118
+[877:57] Calculating protein q-values
+[877:57] Number of genes identified at 1% FDR: 2180 (precursor-level), 1887 (protein-level) (inference performed using proteotypic peptides only)
+[877:57] Quantification
+[878:01] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_5.raw.quant.
+
+[878:04] File #25/26
+[878:04] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_6.raw
+[878:57] 3688879 library precursors are potentially detectable
+[878:58] Processing...
+[883:09] RT window set to 1.13156
+[883:10] Recommended MS1 mass accuracy setting: 6.11745 ppm
+[890:30] Removing low confidence identifications
+[890:30] Removing interfering precursors
+[890:33] Training neural networks: 55186 targets, 33384 decoys
+[890:37] Number of IDs at 0.01 FDR: 23056
+[890:37] Calculating protein q-values
+[890:38] Number of genes identified at 1% FDR: 3948 (precursor-level), 3483 (protein-level) (inference performed using proteotypic peptides only)
+[890:38] Quantification
+[890:39] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_6.raw.quant.
+
+[890:41] File #26/26
+[890:41] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_7.raw
+[891:36] 3688879 library precursors are potentially detectable
+[891:37] Processing...
+[898:46] RT window set to 1.20072
+[898:46] Recommended MS1 mass accuracy setting: 8.78075 ppm
+[908:22] Removing low confidence identifications
+[908:23] Removing interfering precursors
+[908:25] Training neural networks: 41682 targets, 24522 decoys
+[908:28] Number of IDs at 0.01 FDR: 14944
+[908:28] Calculating protein q-values
+[908:29] Number of genes identified at 1% FDR: 2997 (precursor-level), 2677 (protein-level) (inference performed using proteotypic peptides only)
+[908:29] Quantification
+[908:30] Quantification information saved to E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_7.raw.quant.
+
+[908:32] Cross-run analysis
+[908:32] Reading quantification information: 26 files
+[908:39] Quantifying peptides
+[908:43] Assembling protein groups
+[908:45] Quantifying proteins
+[908:46] Calculating q-values for protein and gene groups
+[908:47] Calculating global q-values for protein and gene groups
+[908:47] Writing report
+[909:06] Report saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report-first-pass.tsv.
+[909:06] Saving precursor levels matrix
+[909:07] Precursor levels matrix (1% precursor and protein group FDR) saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report-first-pass.pr_matrix.tsv.
+[909:07] Saving protein group levels matrix
+[909:07] Protein group levels matrix (1% precursor FDR and protein group FDR) saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report-first-pass.pg_matrix.tsv.
+[909:07] Saving gene group levels matrix
+[909:07] Gene groups levels matrix (1% precursor FDR and protein group FDR) saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report-first-pass.gg_matrix.tsv.
+[909:07] Saving unique genes levels matrix
+[909:07] Unique genes levels matrix (1% precursor FDR and protein group FDR) saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report-first-pass.unique_genes_matrix.tsv.
+[909:07] Stats report saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report-first-pass.stats.tsv
+[909:07] Generating spectral library:
+[909:07] 31425 precursors passing the FDR threshold are to be extracted
+[909:07] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_1.raw
+[909:59] 3688879 library precursors are potentially detectable
+[910:00] 325 spectra added to the library
+[910:01] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_2.raw
+[910:54] 3688879 library precursors are potentially detectable
+[910:55] 23 spectra added to the library
+[910:56] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_3.raw
+[911:56] 3688879 library precursors are potentially detectable
+[911:56] 7 spectra added to the library
+[911:57] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_4.raw
+[912:39] 3688879 library precursors are potentially detectable
+[912:40] 541 spectra added to the library
+[912:40] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_5.raw
+[913:23] 3688879 library precursors are potentially detectable
+[913:24] 157 spectra added to the library
+[913:24] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_6.raw
+[914:06] 3688879 library precursors are potentially detectable
+[914:06] 878 spectra added to the library
+[914:07] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_2.raw
+[915:02] 3688879 library precursors are potentially detectable
+[915:03] 20 spectra added to the library
+[915:03] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_1.raw
+[916:04] 3688879 library precursors are potentially detectable
+[916:04] 262 spectra added to the library
+[916:05] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_2.raw
+[916:58] 3688879 library precursors are potentially detectable
+[916:58] 302 spectra added to the library
+[916:59] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_4.raw
+[917:53] 3688879 library precursors are potentially detectable
+[917:53] 2183 spectra added to the library
+[917:54] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_5.raw
+[918:42] 3688879 library precursors are potentially detectable
+[918:43] 7086 spectra added to the library
+[918:44] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_6.raw
+[919:32] 3688879 library precursors are potentially detectable
+[919:33] 1794 spectra added to the library
+[919:34] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_7.raw
+[920:27] 3688879 library precursors are potentially detectable
+[920:28] 459 spectra added to the library
+[920:29] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_8.raw
+[921:25] 3688879 library precursors are potentially detectable
+[921:25] 614 spectra added to the library
+[921:26] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_1.raw
+[922:17] 3688879 library precursors are potentially detectable
+[922:18] 224 spectra added to the library
+[922:18] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_2.raw
+[923:09] 3688879 library precursors are potentially detectable
+[923:10] 1998 spectra added to the library
+[923:11] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_3.raw
+[923:58] 3688879 library precursors are potentially detectable
+[923:59] 845 spectra added to the library
+[923:59] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_4.raw
+[924:52] 3688879 library precursors are potentially detectable
+[924:52] 524 spectra added to the library
+[924:53] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_5.raw
+[925:49] 3688879 library precursors are potentially detectable
+[925:50] 80 spectra added to the library
+[925:51] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_6.raw
+[926:32] 3688879 library precursors are potentially detectable
+[926:33] 2376 spectra added to the library
+[926:34] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_7.raw
+[927:15] 3688879 library precursors are potentially detectable
+[927:16] 536 spectra added to the library
+[927:17] Saving spectral library to lib.tsv
+[927:21] 31425 precursors saved
+[927:21] Loading the generated library and saving it in the .speclib format
+[927:21] Loading spectral library lib.tsv
+[927:23] Spectral library loaded: 5474 protein isoforms, 5714 protein groups and 31425 precursors in 30122 elution groups.
+[927:23] Loading protein annotations from FASTA Y:\members\Dongzhen\Library_and_FASTA\swissprot_mouse_20240805_17217_dongz.fasta
+[927:24] Gene names missing for some isoforms
+[927:24] Library contains 5474 proteins, and 5421 genes
+[927:24] Saving the library to lib.tsv.speclib
+
+[927:29] Second pass: using the newly created spectral library to reanalyse the data
+[927:29] File #1/26
+[927:29] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_1.raw
+[928:09] 31425 library precursors are potentially detectable
+[928:10] Processing...
+[928:30] RT window set to 0.482845
+[928:30] Recommended MS1 mass accuracy setting: 6.98738 ppm
+[928:33] Removing low confidence identifications
+[928:33] Removing interfering precursors
+[928:33] Training neural networks: 29988 targets, 30491 decoys
+[928:36] Number of IDs at 0.01 FDR: 13934
+[928:36] Calculating protein q-values
+[928:36] Number of genes identified at 1% FDR: 2892 (precursor-level), 2382 (protein-level) (inference performed using proteotypic peptides only)
+[928:36] Quantification
+
+[928:38] File #2/26
+[928:38] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_2.raw
+[929:15] 31425 library precursors are potentially detectable
+[929:15] Processing...
+[929:19] RT window set to 0.4814
+[929:20] Recommended MS1 mass accuracy setting: 6.99258 ppm
+[929:21] Removing low confidence identifications
+[929:21] Removing interfering precursors
+[929:22] Training neural networks: 29764 targets, 30173 decoys
+[929:24] Number of IDs at 0.01 FDR: 11677
+[929:24] Calculating protein q-values
+[929:24] Number of genes identified at 1% FDR: 2581 (precursor-level), 2079 (protein-level) (inference performed using proteotypic peptides only)
+[929:24] Quantification
+
+[929:26] File #3/26
+[929:26] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_3.raw
+[930:03] 31425 library precursors are potentially detectable
+[930:03] Processing...
+[930:11] RT window set to 0.465876
+[930:11] Recommended MS1 mass accuracy setting: 9.41756 ppm
+[930:13] Removing low confidence identifications
+[930:13] Removing interfering precursors
+[930:14] Training neural networks: 29676 targets, 30582 decoys
+[930:16] Number of IDs at 0.01 FDR: 6374
+[930:16] Calculating protein q-values
+[930:16] Number of genes identified at 1% FDR: 1968 (precursor-level), 1412 (protein-level) (inference performed using proteotypic peptides only)
+[930:16] Quantification
+
+[930:18] File #4/26
+[930:18] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_4.raw
+[930:52] 31425 library precursors are potentially detectable
+[930:52] Processing...
+[930:56] RT window set to 0.458148
+[930:56] Recommended MS1 mass accuracy setting: 4.0525 ppm
+[930:58] Removing low confidence identifications
+[930:58] Removing interfering precursors
+[930:58] Training neural networks: 28583 targets, 27972 decoys
+[931:00] Number of IDs at 0.01 FDR: 11038
+[931:01] Calculating protein q-values
+[931:01] Number of genes identified at 1% FDR: 2435 (precursor-level), 2045 (protein-level) (inference performed using proteotypic peptides only)
+[931:01] Quantification
+
+[931:02] File #5/26
+[931:02] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_5.raw
+[931:37] 31425 library precursors are potentially detectable
+[931:37] Processing...
+[932:09] RT window set to 0.464714
+[932:09] Recommended MS1 mass accuracy setting: 3.37001 ppm
+[932:40] Removing low confidence identifications
+[932:40] Removing interfering precursors
+[932:43] Training neural networks: 26740 targets, 25234 decoys
+[932:49] Number of IDs at 0.01 FDR: 6201
+[932:49] Calculating protein q-values
+[932:49] Number of genes identified at 1% FDR: 1618 (precursor-level), 1301 (protein-level) (inference performed using proteotypic peptides only)
+[932:49] Quantification
+
+[932:53] File #6/26
+[932:53] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_1nucleus_25min_DIA_6.raw
+[933:31] 31425 library precursors are potentially detectable
+[933:31] Processing...
+[933:35] RT window set to 0.473006
+[933:35] Recommended MS1 mass accuracy setting: 3.54704 ppm
+[933:36] Removing low confidence identifications
+[933:37] Removing interfering precursors
+[933:37] Training neural networks: 28170 targets, 26024 decoys
+[933:39] Number of IDs at 0.01 FDR: 13023
+[933:39] Calculating protein q-values
+[933:39] Number of genes identified at 1% FDR: 2568 (precursor-level), 2160 (protein-level) (inference performed using proteotypic peptides only)
+[933:39] Quantification
+
+[933:40] File #7/26
+[933:40] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_1.raw
+[934:27] 31425 library precursors are potentially detectable
+[934:27] Processing...
+[934:52] RT window set to 0.468345
+[934:52] Recommended MS1 mass accuracy setting: 6.21503 ppm
+[934:55] Removing low confidence identifications
+[934:55] Removing interfering precursors
+[934:55] Training neural networks: 3031 targets, 1549 decoys
+[934:55] Number of IDs at 0.01 FDR: 909
+[934:55] Calculating protein q-values
+[934:55] Number of genes identified at 1% FDR: 376 (precursor-level), 142 (protein-level) (inference performed using proteotypic peptides only)
+[934:55] Quantification
+
+[934:57] File #8/26
+[934:57] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_2.raw
+[935:34] 31425 library precursors are potentially detectable
+[935:34] Processing...
+[936:21] RT window set to 0.452294
+[936:21] Recommended MS1 mass accuracy setting: 8.20628 ppm
+[937:06] Removing low confidence identifications
+[937:06] Removing interfering precursors
+[937:09] Training neural networks: 29426 targets, 29582 decoys
+[937:15] Number of IDs at 0.01 FDR: 608
+[937:15] Calculating protein q-values
+[937:15] Number of genes identified at 1% FDR: 222 (precursor-level), 0 (protein-level) (inference performed using proteotypic peptides only)
+[937:15] Quantification
+
+[937:19] File #9/26
+[937:19] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_3.raw
+[938:18] 31425 library precursors are potentially detectable
+[938:18] Processing...
+[938:45] RT window set to 0.458864
+[938:45] Recommended MS1 mass accuracy setting: 6.48124 ppm
+[938:48] Removing low confidence identifications
+[938:48] Removing interfering precursors
+[938:48] Training neural networks: 5248 targets, 2711 decoys
+[938:49] Number of IDs at 0.01 FDR: 1604
+[938:49] Calculating protein q-values
+[938:49] Number of genes identified at 1% FDR: 574 (precursor-level), 238 (protein-level) (inference performed using proteotypic peptides only)
+[938:49] Quantification
+
+[938:50] File #10/26
+[938:50] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_4.raw
+[939:36] 31425 library precursors are potentially detectable
+[939:36] Processing...
+[939:59] RT window set to 0.43733
+[939:59] Recommended MS1 mass accuracy setting: 6.90683 ppm
+[940:02] Removing low confidence identifications
+[940:02] Removing interfering precursors
+[940:02] Training neural networks: 2868 targets, 1466 decoys
+[940:02] Number of IDs at 0.01 FDR: 809
+[940:02] Calculating protein q-values
+[940:02] Number of genes identified at 1% FDR: 297 (precursor-level), 149 (protein-level) (inference performed using proteotypic peptides only)
+[940:02] Quantification
+
+[940:03] File #11/26
+[940:03] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_blank_control_25min_DIA_5.raw
+[940:42] 31425 library precursors are potentially detectable
+[940:43] Processing...
+[941:25] RT window set to 0.440453
+[941:25] Recommended MS1 mass accuracy setting: 3.87277 ppm
+[942:11] Removing low confidence identifications
+[942:11] Removing interfering precursors
+[942:14] Training neural networks: 22809 targets, 22377 decoys
+[942:19] Number of IDs at 0.01 FDR: 286
+[942:19] Calculating protein q-values
+[942:19] Number of genes identified at 1% FDR: 107 (precursor-level), 0 (protein-level) (inference performed using proteotypic peptides only)
+[942:19] Quantification
+
+[942:23] File #12/26
+[942:23] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_1.raw
+[943:07] 31425 library precursors are potentially detectable
+[943:07] Processing...
+[943:27] RT window set to 0.451191
+[943:27] Recommended MS1 mass accuracy setting: 12.2449 ppm
+[943:39] Removing low confidence identifications
+[943:39] Removing interfering precursors
+[943:40] Training neural networks: 30093 targets, 30631 decoys
+[943:42] Number of IDs at 0.01 FDR: 8539
+[943:42] Calculating protein q-values
+[943:42] Number of genes identified at 1% FDR: 1896 (precursor-level), 1617 (protein-level) (inference performed using proteotypic peptides only)
+[943:42] Quantification
+
+[943:44] File #13/26
+[943:44] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_2.raw
+[944:20] 31425 library precursors are potentially detectable
+[944:20] Processing...
+[944:23] RT window set to 0.47628
+[944:23] Recommended MS1 mass accuracy setting: 2.9324 ppm
+[944:25] Removing low confidence identifications
+[944:25] Removing interfering precursors
+[944:26] Training neural networks: 30246 targets, 30035 decoys
+[944:28] Number of IDs at 0.01 FDR: 19086
+[944:29] Calculating protein q-values
+[944:29] Number of genes identified at 1% FDR: 3318 (precursor-level), 2874 (protein-level) (inference performed using proteotypic peptides only)
+[944:29] Quantification
+
+[944:30] File #14/26
+[944:30] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_3.raw
+[945:53] 31425 library precursors are potentially detectable
+[945:53] Processing...
+[946:03] RT window set to 0.483711
+[946:03] Recommended MS1 mass accuracy setting: 3.26251 ppm
+[946:07] Removing low confidence identifications
+[946:07] Removing interfering precursors
+[946:08] Training neural networks: 30542 targets, 31205 decoys
+[946:11] Number of IDs at 0.01 FDR: 6876
+[946:11] Calculating protein q-values
+[946:11] Number of genes identified at 1% FDR: 1843 (precursor-level), 1500 (protein-level) (inference performed using proteotypic peptides only)
+[946:11] Quantification
+
+[946:14] File #15/26
+[946:14] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_4.raw
+[946:52] 31425 library precursors are potentially detectable
+[946:52] Processing...
+[947:11] RT window set to 0.481308
+[947:11] Recommended MS1 mass accuracy setting: 3.14584 ppm
+[947:38] Removing low confidence identifications
+[947:38] Removing interfering precursors
+[947:43] Training neural networks: 30354 targets, 30478 decoys
+[947:49] Number of IDs at 0.01 FDR: 21333
+[947:50] Calculating protein q-values
+[947:50] Number of genes identified at 1% FDR: 3553 (precursor-level), 3033 (protein-level) (inference performed using proteotypic peptides only)
+[947:50] Quantification
+
+[947:54] File #16/26
+[947:54] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_5.raw
+[948:33] 31425 library precursors are potentially detectable
+[948:33] Processing...
+[948:48] RT window set to 0.476746
+[948:48] Recommended MS1 mass accuracy setting: 4.5725 ppm
+[948:51] Removing low confidence identifications
+[948:51] Removing interfering precursors
+[948:51] Training neural networks: 30276 targets, 29666 decoys
+[948:54] Number of IDs at 0.01 FDR: 22954
+[948:54] Calculating protein q-values
+[948:54] Number of genes identified at 1% FDR: 3666 (precursor-level), 3158 (protein-level) (inference performed using proteotypic peptides only)
+[948:54] Quantification
+
+[948:56] File #17/26
+[948:56] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_6.raw
+[949:31] 31425 library precursors are potentially detectable
+[949:31] Processing...
+[949:35] RT window set to 0.469837
+[949:35] Recommended MS1 mass accuracy setting: 4.38462 ppm
+[949:37] Removing low confidence identifications
+[949:37] Removing interfering precursors
+[949:37] Training neural networks: 30101 targets, 29569 decoys
+[949:40] Number of IDs at 0.01 FDR: 21071
+[949:40] Calculating protein q-values
+[949:40] Number of genes identified at 1% FDR: 3510 (precursor-level), 3065 (protein-level) (inference performed using proteotypic peptides only)
+[949:40] Quantification
+
+[949:41] File #18/26
+[949:41] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_7.raw
+[950:20] 31425 library precursors are potentially detectable
+[950:20] Processing...
+[950:24] RT window set to 0.471498
+[950:24] Recommended MS1 mass accuracy setting: 5.88315 ppm
+[950:25] Removing low confidence identifications
+[950:25] Removing interfering precursors
+[950:26] Training neural networks: 30290 targets, 30278 decoys
+[950:29] Number of IDs at 0.01 FDR: 20180
+[950:29] Calculating protein q-values
+[950:29] Number of genes identified at 1% FDR: 3407 (precursor-level), 2959 (protein-level) (inference performed using proteotypic peptides only)
+[950:29] Quantification
+
+[950:30] File #19/26
+[950:30] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_1nucleus_25min_DIA_8.raw
+[951:06] 31425 library precursors are potentially detectable
+[951:06] Processing...
+[951:10] RT window set to 0.471468
+[951:10] Recommended MS1 mass accuracy setting: 7.1605 ppm
+[951:11] Removing low confidence identifications
+[951:11] Removing interfering precursors
+[951:12] Training neural networks: 30358 targets, 30528 decoys
+[951:14] Number of IDs at 0.01 FDR: 19329
+[951:15] Calculating protein q-values
+[951:15] Number of genes identified at 1% FDR: 3362 (precursor-level), 2923 (protein-level) (inference performed using proteotypic peptides only)
+[951:15] Quantification
+
+[951:16] File #20/26
+[951:16] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_1.raw
+[951:57] 31425 library precursors are potentially detectable
+[951:57] Processing...
+[952:10] RT window set to 0.478531
+[952:10] Recommended MS1 mass accuracy setting: 6.32794 ppm
+[952:39] Removing low confidence identifications
+[952:39] Removing interfering precursors
+[952:41] Training neural networks: 30218 targets, 30342 decoys
+[952:47] Number of IDs at 0.01 FDR: 19488
+[952:47] Calculating protein q-values
+[952:47] Number of genes identified at 1% FDR: 3560 (precursor-level), 3026 (protein-level) (inference performed using proteotypic peptides only)
+[952:47] Quantification
+
+[952:51] File #21/26
+[952:51] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_2.raw
+[953:31] 31425 library precursors are potentially detectable
+[953:31] Processing...
+[953:46] RT window set to 0.488604
+[953:46] Recommended MS1 mass accuracy setting: 5.84987 ppm
+[953:55] Removing low confidence identifications
+[953:55] Removing interfering precursors
+[953:56] Training neural networks: 30396 targets, 30372 decoys
+[953:59] Number of IDs at 0.01 FDR: 23171
+[953:59] Calculating protein q-values
+[953:59] Number of genes identified at 1% FDR: 3718 (precursor-level), 3179 (protein-level) (inference performed using proteotypic peptides only)
+[953:59] Quantification
+
+[954:01] File #22/26
+[954:01] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_3.raw
+[954:36] 31425 library precursors are potentially detectable
+[954:36] Processing...
+[954:40] RT window set to 0.47689
+[954:40] Recommended MS1 mass accuracy setting: 4.76407 ppm
+[954:41] Removing low confidence identifications
+[954:41] Removing interfering precursors
+[954:42] Training neural networks: 30169 targets, 29933 decoys
+[954:44] Number of IDs at 0.01 FDR: 20564
+[954:45] Calculating protein q-values
+[954:45] Number of genes identified at 1% FDR: 3444 (precursor-level), 2884 (protein-level) (inference performed using proteotypic peptides only)
+[954:45] Quantification
+
+[954:46] File #23/26
+[954:46] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_4.raw
+[955:24] 31425 library precursors are potentially detectable
+[955:24] Processing...
+[955:28] RT window set to 0.470487
+[955:28] Recommended MS1 mass accuracy setting: 6.30998 ppm
+[955:30] Removing low confidence identifications
+[955:30] Removing interfering precursors
+[955:30] Training neural networks: 30067 targets, 30233 decoys
+[955:33] Number of IDs at 0.01 FDR: 15341
+[955:33] Calculating protein q-values
+[955:33] Number of genes identified at 1% FDR: 2872 (precursor-level), 2354 (protein-level) (inference performed using proteotypic peptides only)
+[955:33] Quantification
+
+[955:34] File #24/26
+[955:34] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_5.raw
+[956:17] 31425 library precursors are potentially detectable
+[956:17] Processing...
+[956:21] RT window set to 0.461028
+[956:21] Recommended MS1 mass accuracy setting: 11.2937 ppm
+[956:23] Removing low confidence identifications
+[956:23] Removing interfering precursors
+[956:24] Training neural networks: 30299 targets, 30877 decoys
+[956:26] Number of IDs at 0.01 FDR: 14855
+[956:26] Calculating protein q-values
+[956:26] Number of genes identified at 1% FDR: 2887 (precursor-level), 2481 (protein-level) (inference performed using proteotypic peptides only)
+[956:26] Quantification
+
+[956:28] File #25/26
+[956:28] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_6.raw
+[957:10] 31425 library precursors are potentially detectable
+[957:10] Processing...
+[957:28] RT window set to 0.482854
+[957:28] Recommended MS1 mass accuracy setting: 6.08962 ppm
+[957:49] Removing low confidence identifications
+[957:49] Removing interfering precursors
+[957:53] Training neural networks: 30479 targets, 30523 decoys
+[957:58] Number of IDs at 0.01 FDR: 24949
+[957:58] Calculating protein q-values
+[957:58] Number of genes identified at 1% FDR: 3975 (precursor-level), 3408 (protein-level) (inference performed using proteotypic peptides only)
+[957:58] Quantification
+
+[958:02] File #26/26
+[958:02] Loading run E:\dongzhen\0808\Final_used_files\CAF20240808dongzhen_FAXP_ML_cell_2nucleus_25min_DIA_7.raw
+[958:44] 31425 library precursors are potentially detectable
+[958:44] Processing...
+[959:02] RT window set to 0.474992
+[959:02] Recommended MS1 mass accuracy setting: 8.79401 ppm
+[959:08] Removing low confidence identifications
+[959:08] Removing interfering precursors
+[959:09] Training neural networks: 30373 targets, 30657 decoys
+[959:11] Number of IDs at 0.01 FDR: 20575
+[959:11] Calculating protein q-values
+[959:11] Number of genes identified at 1% FDR: 3624 (precursor-level), 3144 (protein-level) (inference performed using proteotypic peptides only)
+[959:11] Quantification
+
+[959:13] Cross-run analysis
+[959:13] Reading quantification information: 26 files
+[959:14] Quantifying peptides
+[959:18] Quantifying proteins
+[959:19] Calculating q-values for protein and gene groups
+[959:20] Calculating global q-values for protein and gene groups
+[959:20] Writing report
+[959:43] Report saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report.tsv.
+[959:43] Saving precursor levels matrix
+[959:44] Precursor levels matrix (1% precursor and protein group FDR) saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report.pr_matrix.tsv.
+[959:44] Saving protein group levels matrix
+[959:44] Protein group levels matrix (1% precursor FDR and protein group FDR) saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report.pg_matrix.tsv.
+[959:44] Saving gene group levels matrix
+[959:44] Gene groups levels matrix (1% precursor FDR and protein group FDR) saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report.gg_matrix.tsv.
+[959:44] Saving unique genes levels matrix
+[959:44] Unique genes levels matrix (1% precursor FDR and protein group FDR) saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report.unique_genes_matrix.tsv.
+[959:44] Stats report saved to E:\dongzhen\0808\Final_used_files_libfree_result_2\report.stats.tsv
+
+Finished
+

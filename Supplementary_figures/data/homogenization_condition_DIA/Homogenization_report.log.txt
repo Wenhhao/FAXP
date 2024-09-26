@@ -1,0 +1,725 @@
+DIA-NN 1.8.1 (Data-Independent Acquisition by Neural Networks)
+Compiled on Apr 14 2022 15:31:19
+Current date and time: Fri Mar 17 17:14:27 2023
+CPU: GenuineIntel Intel(R) Xeon(R) Platinum 8280M CPU @ 2.60GHz
+SIMD instructions: AVX AVX2 AVX512CD AVX512F FMA SSE4.1 SSE4.2 
+Logical CPU cores: 56
+diann.exe --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_1_Slot1-46_1_14595.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_2_Slot1-47_1_14596.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_3_Slot1-48_1_14597.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_4_Slot1-49_1_14598.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_1_Slot1-50_1_14603.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_2_Slot1-51_1_14604.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_3_Slot1-52_1_14605.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_4_Slot1-53_1_14606.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_1_Slot1-54_1_14609.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_2_Slot2-1_1_14610.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_3_Slot2-2_1_14611.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_4_Slot2-3_1_14612.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_1_Slot2-4_1_14615.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_2_Slot2-5_1_14616.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_3_Slot2-6_1_14617.d  --f \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_4_Slot2-7_1_14618.d  --lib F:\Dongzhen\ProteomEx_v2\Library_database\Mouse_liver_PCT_2g_30_fractions_timsTOF_fragpipe_library_from_GHH.tsv --threads 56 --verbose 1 --out F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report.tsv --qvalue 0.01 --matrices --var-mods 1 --var-mod UniMod:35,15.994915,M --individual-mass-acc --individual-windows --no-prot-inf --reanalyse --relaxed-prot-inf --smart-profiling --peak-center --no-ifs-removal 
+
+Thread number set to 56
+Output will be filtered at 0.01 FDR
+Precursor/protein x samples expression level matrices will be saved along with the main report
+Maximum number of variable modifications set to 1
+Modification UniMod:35 with mass delta 15.9949 at M will be considered as variable
+Mass accuracy will be determined separately for different runs
+Scan windows will be inferred separately for different runs
+Protein inference will not be performed
+A spectral library will be created from the DIA runs and used to reanalyse them; .quant files will only be saved to disk during the first step
+Highly heuristic protein grouping will be used, to reduce the number of protein groups obtained; this mode is recommended for benchmarking protein ID numbers; use with caution for anything else
+When generating a spectral library, in silico predicted spectra will be retained if deemed more reliable than experimental ones
+Fixed-width center of each elution peak will be used for quantification
+Interference removal from fragment elution curves disabled
+DIA-NN will optimise the mass accuracy separately for each run in the experiment. This is useful primarily for quick initial analyses, when it is not yet known which mass accuracy setting works best for a particular acquisition scheme.
+
+16 files will be processed
+[0:00] Loading spectral library F:\Dongzhen\ProteomEx_v2\Library_database\Mouse_liver_PCT_2g_30_fractions_timsTOF_fragpipe_library_from_GHH.tsv
+WARNING: 439882 fragments were skipped due to fragment index being either 0 or being equal to the peptide length: unfragmented precursors should not be included in the library as 'fragments'
+[0:16] Finding proteotypic peptides (assuming that the list of UniProt ids provided for each peptide is complete)
+[0:17] Spectral library loaded: 9488 protein isoforms, 9488 protein groups and 305630 precursors in 243509 elution groups.
+[0:17] Initialising library
+[0:18] Saving the library to F:\Dongzhen\ProteomEx_v2\Library_database\Mouse_liver_PCT_2g_30_fractions_timsTOF_fragpipe_library_from_GHH.tsv.speclib
+
+[0:18] First pass: generating a spectral library from DIA data
+[0:18] File #1/16
+[0:18] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_1_Slot1-46_1_14595.d
+For most diaPASEF datasets it is better to manually fix both the MS1 and MS2 mass accuracies to values in the range 10-15 ppm.
+[2:01] 291651 library precursors are potentially detectable
+[2:01] Processing...
+[2:14] RT window set to 0.811756
+[2:14] Ion mobility window set to 0.0221915
+[2:14] Peak width: 3.344
+[2:14] Scan window radius set to 7
+[2:14] Recommended MS1 mass accuracy setting: 14.742 ppm
+[2:28] Optimised mass accuracy: 9.96418 ppm
+[2:46] Removing low confidence identifications
+[2:46] Removing interfering precursors
+[2:54] Training neural networks: 223833 targets, 249970 decoys
+[3:09] Number of IDs at 0.01 FDR: 29132
+[3:10] Calculating protein q-values
+[3:10] Number of protein isoforms identified at 1% FDR: 4284 (precursor-level), 3960 (protein-level) (inference performed using proteotypic peptides only)
+[3:10] Quantification
+[3:15] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_1_Slot1-46_1_14595.d.quant.
+
+[3:17] File #2/16
+[3:17] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_2_Slot1-47_1_14596.d
+[5:29] 291651 library precursors are potentially detectable
+[5:29] Processing...
+[5:43] RT window set to 0.725098
+[5:43] Ion mobility window set to 0.022268
+[5:43] Peak width: 3.256
+[5:43] Scan window radius set to 7
+[5:43] Recommended MS1 mass accuracy setting: 13.8129 ppm
+[6:05] Optimised mass accuracy: 11.39 ppm
+[6:28] Removing low confidence identifications
+[6:28] Removing interfering precursors
+[6:37] Training neural networks: 223334 targets, 252665 decoys
+[6:52] Number of IDs at 0.01 FDR: 29267
+[6:53] Calculating protein q-values
+[6:53] Number of protein isoforms identified at 1% FDR: 3989 (precursor-level), 3655 (protein-level) (inference performed using proteotypic peptides only)
+[6:53] Quantification
+[6:58] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_2_Slot1-47_1_14596.d.quant.
+
+[7:00] File #3/16
+[7:00] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_3_Slot1-48_1_14597.d
+[7:50] 291651 library precursors are potentially detectable
+[7:50] Processing...
+[8:05] RT window set to 0.81197
+[8:05] Ion mobility window set to 0.0171189
+[8:05] Peak width: 3.424
+[8:05] Scan window radius set to 7
+[8:05] Recommended MS1 mass accuracy setting: 14.4104 ppm
+[8:19] Optimised mass accuracy: 22.6263 ppm
+[8:29] Removing low confidence identifications
+[8:29] Removing interfering precursors
+[8:30] Training neural networks: 32590 targets, 20388 decoys
+[8:32] Number of IDs at 0.01 FDR: 17852
+[8:33] Calculating protein q-values
+[8:33] Number of protein isoforms identified at 1% FDR: 3112 (precursor-level), 2842 (protein-level) (inference performed using proteotypic peptides only)
+[8:33] Quantification
+[8:35] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_3_Slot1-48_1_14597.d.quant.
+
+[8:37] File #4/16
+[8:37] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_4_Slot1-49_1_14598.d
+[10:38] 291651 library precursors are potentially detectable
+[10:38] Processing...
+[10:48] RT window set to 0.768994
+[10:48] Ion mobility window set to 0.0218455
+[10:48] Peak width: 3.268
+[10:48] Scan window radius set to 7
+[10:48] Recommended MS1 mass accuracy setting: 14.7296 ppm
+[10:56] Optimised mass accuracy: 14.3234 ppm
+[11:12] Removing low confidence identifications
+[11:12] Removing interfering precursors
+[11:20] Training neural networks: 219334 targets, 255393 decoys
+[11:35] Number of IDs at 0.01 FDR: 25213
+[11:35] Calculating protein q-values
+[11:36] Number of protein isoforms identified at 1% FDR: 4137 (precursor-level), 3825 (protein-level) (inference performed using proteotypic peptides only)
+[11:36] Quantification
+[11:40] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_4_Slot1-49_1_14598.d.quant.
+
+[11:43] File #5/16
+[11:43] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_1_Slot1-50_1_14603.d
+[13:44] 291651 library precursors are potentially detectable
+[13:44] Processing...
+[13:57] RT window set to 0.784191
+[13:57] Ion mobility window set to 0.0181854
+[13:57] Peak width: 3.396
+[13:57] Scan window radius set to 7
+[13:57] Recommended MS1 mass accuracy setting: 12.6445 ppm
+[14:14] Optimised mass accuracy: 14.5765 ppm
+[14:35] Removing low confidence identifications
+[14:35] Removing interfering precursors
+[14:42] Training neural networks: 200739 targets, 233635 decoys
+[14:56] Number of IDs at 0.01 FDR: 20462
+[14:56] Calculating protein q-values
+[14:56] Number of protein isoforms identified at 1% FDR: 3648 (precursor-level), 3333 (protein-level) (inference performed using proteotypic peptides only)
+[14:56] Quantification
+[15:00] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_1_Slot1-50_1_14603.d.quant.
+
+[15:02] File #6/16
+[15:02] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_2_Slot1-51_1_14604.d
+[16:34] 291651 library precursors are potentially detectable
+[16:34] Processing...
+[16:47] RT window set to 0.788522
+[16:47] Ion mobility window set to 0.0180284
+[16:47] Peak width: 3.3
+[16:47] Scan window radius set to 7
+[16:47] Recommended MS1 mass accuracy setting: 12.9486 ppm
+[17:14] Optimised mass accuracy: 16.5883 ppm
+[17:30] Removing low confidence identifications
+[17:30] Removing interfering precursors
+[17:37] Training neural networks: 191360 targets, 224494 decoys
+[17:50] Number of IDs at 0.01 FDR: 21708
+[17:51] Calculating protein q-values
+[17:51] Number of protein isoforms identified at 1% FDR: 3536 (precursor-level), 3185 (protein-level) (inference performed using proteotypic peptides only)
+[17:51] Quantification
+[17:54] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_2_Slot1-51_1_14604.d.quant.
+
+[17:56] File #7/16
+[17:56] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_3_Slot1-52_1_14605.d
+[19:17] 291651 library precursors are potentially detectable
+[19:17] Processing...
+[19:31] RT window set to 0.793084
+[19:31] Ion mobility window set to 0.0172486
+[19:31] Peak width: 3.36
+[19:31] Scan window radius set to 7
+[19:31] Recommended MS1 mass accuracy setting: 13.5978 ppm
+[19:57] Optimised mass accuracy: 15.5404 ppm
+[20:16] Removing low confidence identifications
+[20:16] Removing interfering precursors
+[20:23] Training neural networks: 192118 targets, 223592 decoys
+[20:36] Number of IDs at 0.01 FDR: 22566
+[20:37] Calculating protein q-values
+[20:37] Number of protein isoforms identified at 1% FDR: 3456 (precursor-level), 3174 (protein-level) (inference performed using proteotypic peptides only)
+[20:37] Quantification
+[20:40] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_3_Slot1-52_1_14605.d.quant.
+
+[20:43] File #8/16
+[20:43] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_4_Slot1-53_1_14606.d
+[22:06] 291651 library precursors are potentially detectable
+[22:06] Processing...
+[22:21] RT window set to 0.829443
+[22:21] Ion mobility window set to 0.0192981
+[22:21] Peak width: 3.36
+[22:21] Scan window radius set to 7
+[22:21] Recommended MS1 mass accuracy setting: 13.3757 ppm
+[22:37] Optimised mass accuracy: 15.2459 ppm
+[22:50] Removing low confidence identifications
+[22:50] Removing interfering precursors
+[22:56] Training neural networks: 187867 targets, 221052 decoys
+[23:09] Number of IDs at 0.01 FDR: 20766
+[23:10] Calculating protein q-values
+[23:10] Number of protein isoforms identified at 1% FDR: 3463 (precursor-level), 3222 (protein-level) (inference performed using proteotypic peptides only)
+[23:10] Quantification
+[23:13] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_4_Slot1-53_1_14606.d.quant.
+
+[23:15] File #9/16
+[23:15] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_1_Slot1-54_1_14609.d
+[25:38] 291651 library precursors are potentially detectable
+[25:38] Processing...
+[25:50] RT window set to 0.749363
+[25:50] Ion mobility window set to 0.0228994
+[25:50] Peak width: 3.244
+[25:50] Scan window radius set to 7
+[25:51] Recommended MS1 mass accuracy setting: 13.4721 ppm
+[26:05] Optimised mass accuracy: 10.2884 ppm
+[26:26] Removing low confidence identifications
+[26:26] Removing interfering precursors
+[26:34] Training neural networks: 213259 targets, 243637 decoys
+[26:48] Number of IDs at 0.01 FDR: 28718
+[26:49] Calculating protein q-values
+[26:49] Number of protein isoforms identified at 1% FDR: 4032 (precursor-level), 3696 (protein-level) (inference performed using proteotypic peptides only)
+[26:49] Quantification
+[26:54] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_1_Slot1-54_1_14609.d.quant.
+
+[26:56] File #10/16
+[26:56] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_2_Slot2-1_1_14610.d
+[28:57] 291651 library precursors are potentially detectable
+[28:57] Processing...
+[29:10] RT window set to 0.697406
+[29:10] Ion mobility window set to 0.0240364
+[29:10] Peak width: 3.284
+[29:10] Scan window radius set to 7
+[29:10] Recommended MS1 mass accuracy setting: 13.5738 ppm
+[29:34] Optimised mass accuracy: 13.4438 ppm
+[29:53] Removing low confidence identifications
+[29:53] Removing interfering precursors
+[30:02] Training neural networks: 220755 targets, 249266 decoys
+[30:17] Number of IDs at 0.01 FDR: 27398
+[30:18] Calculating protein q-values
+[30:18] Number of protein isoforms identified at 1% FDR: 3900 (precursor-level), 3637 (protein-level) (inference performed using proteotypic peptides only)
+[30:18] Quantification
+[30:22] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_2_Slot2-1_1_14610.d.quant.
+
+[30:25] File #11/16
+[30:25] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_3_Slot2-2_1_14611.d
+[33:10] 291651 library precursors are potentially detectable
+[33:10] Processing...
+[33:26] RT window set to 0.806993
+[33:26] Ion mobility window set to 0.0223611
+[33:26] Peak width: 3.244
+[33:26] Scan window radius set to 7
+[33:26] Recommended MS1 mass accuracy setting: 14.3711 ppm
+[33:55] Optimised mass accuracy: 17.8336 ppm
+[34:15] Removing low confidence identifications
+[34:15] Removing interfering precursors
+[34:23] Training neural networks: 212918 targets, 260531 decoys
+[34:38] Number of IDs at 0.01 FDR: 26743
+[34:39] Calculating protein q-values
+[34:39] Number of protein isoforms identified at 1% FDR: 4025 (precursor-level), 3734 (protein-level) (inference performed using proteotypic peptides only)
+[34:39] Quantification
+[34:44] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_3_Slot2-2_1_14611.d.quant.
+
+[34:47] File #12/16
+[34:47] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_4_Slot2-3_1_14612.d
+[37:15] 291651 library precursors are potentially detectable
+[37:16] Processing...
+[37:29] RT window set to 0.873825
+[37:29] Ion mobility window set to 0.0221173
+[37:29] Peak width: 3.252
+[37:29] Scan window radius set to 7
+[37:29] Recommended MS1 mass accuracy setting: 13.6201 ppm
+[37:54] Optimised mass accuracy: 13.5132 ppm
+[38:17] Removing low confidence identifications
+[38:17] Removing interfering precursors
+[38:25] Training neural networks: 214120 targets, 252645 decoys
+[38:40] Number of IDs at 0.01 FDR: 28655
+[38:41] Calculating protein q-values
+[38:41] Number of protein isoforms identified at 1% FDR: 3967 (precursor-level), 3660 (protein-level) (inference performed using proteotypic peptides only)
+[38:41] Quantification
+[38:45] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_4_Slot2-3_1_14612.d.quant.
+
+[38:48] File #13/16
+[38:48] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_1_Slot2-4_1_14615.d
+[41:08] 291651 library precursors are potentially detectable
+[41:08] Processing...
+[41:23] RT window set to 0.874835
+[41:23] Ion mobility window set to 0.0212061
+[41:23] Peak width: 3.312
+[41:23] Scan window radius set to 7
+[41:23] Recommended MS1 mass accuracy setting: 12.5691 ppm
+[41:55] Optimised mass accuracy: 19.8311 ppm
+[42:18] Removing low confidence identifications
+[42:18] Removing interfering precursors
+[42:27] Training neural networks: 203565 targets, 252454 decoys
+[42:41] Number of IDs at 0.01 FDR: 24200
+[42:42] Calculating protein q-values
+[42:42] Number of protein isoforms identified at 1% FDR: 3594 (precursor-level), 3315 (protein-level) (inference performed using proteotypic peptides only)
+[42:42] Quantification
+[42:46] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_1_Slot2-4_1_14615.d.quant.
+
+[42:49] File #14/16
+[42:49] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_2_Slot2-5_1_14616.d
+[45:06] 291651 library precursors are potentially detectable
+[45:06] Processing...
+[45:14] RT window set to 0.777077
+[45:14] Ion mobility window set to 0.0215333
+[45:14] Peak width: 3.192
+[45:14] Scan window radius set to 7
+[45:14] Recommended MS1 mass accuracy setting: 14.2986 ppm
+[45:21] Optimised mass accuracy: 12.9756 ppm
+[45:35] Removing low confidence identifications
+[45:35] Removing interfering precursors
+[45:44] Training neural networks: 214855 targets, 246928 decoys
+[45:58] Number of IDs at 0.01 FDR: 29368
+[45:59] Calculating protein q-values
+[45:59] Number of protein isoforms identified at 1% FDR: 4040 (precursor-level), 3719 (protein-level) (inference performed using proteotypic peptides only)
+[45:59] Quantification
+[46:03] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_2_Slot2-5_1_14616.d.quant.
+
+[46:06] File #15/16
+[46:06] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_3_Slot2-6_1_14617.d
+[48:50] 291651 library precursors are potentially detectable
+[48:50] Processing...
+[49:06] RT window set to 0.858272
+[49:06] Ion mobility window set to 0.0237003
+[49:06] Peak width: 3.292
+[49:06] Scan window radius set to 7
+[49:06] Recommended MS1 mass accuracy setting: 15.2624 ppm
+[49:22] Optimised mass accuracy: 20.2481 ppm
+[49:42] Removing low confidence identifications
+[49:43] Removing interfering precursors
+[49:52] Training neural networks: 215895 targets, 264294 decoys
+[50:07] Number of IDs at 0.01 FDR: 23903
+[50:07] Calculating protein q-values
+[50:07] Number of protein isoforms identified at 1% FDR: 3607 (precursor-level), 3323 (protein-level) (inference performed using proteotypic peptides only)
+[50:07] Quantification
+[50:11] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_3_Slot2-6_1_14617.d.quant.
+
+[50:15] File #16/16
+[50:15] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_4_Slot2-7_1_14618.d
+[53:06] 291651 library precursors are potentially detectable
+[53:06] Processing...
+[53:17] RT window set to 0.785558
+[53:17] Ion mobility window set to 0.0208045
+[53:17] Peak width: 3.296
+[53:17] Scan window radius set to 7
+[53:17] Recommended MS1 mass accuracy setting: 13.4255 ppm
+[53:36] Optimised mass accuracy: 16.795 ppm
+[54:01] Removing low confidence identifications
+[54:01] Removing interfering precursors
+[54:09] Training neural networks: 217831 targets, 255488 decoys
+[54:24] Number of IDs at 0.01 FDR: 28240
+[54:25] Calculating protein q-values
+[54:25] Number of protein isoforms identified at 1% FDR: 3955 (precursor-level), 3629 (protein-level) (inference performed using proteotypic peptides only)
+[54:25] Quantification
+[54:30] Quantification information saved to \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_4_Slot2-7_1_14618.d.quant.
+
+[54:33] Cross-run analysis
+[54:33] Reading quantification information: 16 files
+[54:39] Averaged recommended settings for this experiment: Mass accuracy = 11ppm, MS1 accuracy = 14ppm, Scan window = 7
+[54:39] Quantifying peptides
+[54:42] Quantifying proteins
+[54:45] Calculating q-values for protein and gene groups
+[54:45] Calculating global q-values for protein and gene groups
+[54:45] Writing report
+[55:12] Report saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report-first-pass.tsv.
+[55:12] Saving precursor levels matrix
+[55:13] Precursor levels matrix (1% precursor and protein group FDR) saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report-first-pass.pr_matrix.tsv.
+[55:13] Saving protein group levels matrix
+[55:13] Protein group levels matrix (1% precursor FDR and protein group FDR) saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report-first-pass.pg_matrix.tsv.
+[55:13] Saving gene group levels matrix
+[55:13] Gene groups levels matrix (1% precursor FDR and protein group FDR) saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report-first-pass.gg_matrix.tsv.
+[55:13] Saving unique genes levels matrix
+[55:13] Unique genes levels matrix (1% precursor FDR and protein group FDR) saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report-first-pass.unique_genes_matrix.tsv.
+[55:13] Stats report saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report-first-pass.stats.tsv
+[55:13] Generating spectral library:
+[55:13] 43303 precursors passing the FDR threshold are to be extracted
+[55:13] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_1_Slot1-46_1_14595.d
+[58:17] 291651 library precursors are potentially detectable
+[58:19] 7715 spectra added to the library
+[58:22] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_2_Slot1-47_1_14596.d
+[61:11] 291651 library precursors are potentially detectable
+[61:12] 3445 spectra added to the library
+[61:15] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_3_Slot1-48_1_14597.d
+[62:20] 291651 library precursors are potentially detectable
+[62:21] 3117 spectra added to the library
+[62:23] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_4_Slot1-49_1_14598.d
+[64:59] 291651 library precursors are potentially detectable
+[64:59] 886 spectra added to the library
+[65:02] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_1_Slot1-50_1_14603.d
+[67:42] 291651 library precursors are potentially detectable
+[67:42] 553 spectra added to the library
+[67:45] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_2_Slot1-51_1_14604.d
+[69:54] 291651 library precursors are potentially detectable
+[69:55] 614 spectra added to the library
+[69:57] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_3_Slot1-52_1_14605.d
+[71:57] 291651 library precursors are potentially detectable
+[71:57] 350 spectra added to the library
+[72:00] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_4_Slot1-53_1_14606.d
+[73:50] 291651 library precursors are potentially detectable
+[73:50] 585 spectra added to the library
+[73:52] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_1_Slot1-54_1_14609.d
+[76:50] 291651 library precursors are potentially detectable
+[76:50] 1466 spectra added to the library
+[76:53] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_2_Slot2-1_1_14610.d
+[79:39] 291651 library precursors are potentially detectable
+[79:40] 4445 spectra added to the library
+[79:42] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_3_Slot2-2_1_14611.d
+[83:01] 291651 library precursors are potentially detectable
+[83:01] 2031 spectra added to the library
+[83:04] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_4_Slot2-3_1_14612.d
+[85:46] 291651 library precursors are potentially detectable
+[85:46] 2619 spectra added to the library
+[85:49] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_1_Slot2-4_1_14615.d
+[89:00] 291651 library precursors are potentially detectable
+[89:00] 458 spectra added to the library
+[89:03] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_2_Slot2-5_1_14616.d
+[91:46] 291651 library precursors are potentially detectable
+[91:46] 1735 spectra added to the library
+[91:49] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_3_Slot2-6_1_14617.d
+[95:04] 291651 library precursors are potentially detectable
+[95:04] 675 spectra added to the library
+[95:07] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_4_Slot2-7_1_14618.d
+[97:48] 291651 library precursors are potentially detectable
+[97:48] 238 spectra added to the library
+[97:51] Saving spectral library to lib.tsv
+[97:57] 43303 precursors saved
+[97:57] Loading the generated library and saving it in the .speclib format
+[97:57] Loading spectral library lib.tsv
+[98:00] Spectral library loaded: 4912 protein isoforms, 4912 protein groups and 43303 precursors in 39409 elution groups.
+[98:00] Protein names missing for some isoforms
+[98:00] Gene names missing for some isoforms
+[98:00] Library contains 0 proteins, and 0 genes
+[98:00] Saving the library to lib.tsv.speclib
+
+[98:00] Second pass: using the newly created spectral library to reanalyse the data
+[98:00] File #1/16
+[98:00] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_1_Slot1-46_1_14595.d
+[100:56] 43303 library precursors are potentially detectable
+[100:56] Processing...
+[101:03] RT window set to 0.555787
+[101:03] Ion mobility window set to 0.0114453
+[101:03] Peak width: 3.368
+[101:03] Scan window radius set to 7
+[101:03] Recommended MS1 mass accuracy setting: 14.0124 ppm
+[101:25] Optimised mass accuracy: 18.6609 ppm
+[101:34] Removing low confidence identifications
+[101:34] Removing interfering precursors
+[101:36] Training neural networks: 42050 targets, 41842 decoys
+[101:39] Number of IDs at 0.01 FDR: 32728
+[101:40] Calculating protein q-values
+[101:40] Number of protein isoforms identified at 1% FDR: 4519 (precursor-level), 3989 (protein-level) (inference performed using proteotypic peptides only)
+[101:40] Quantification
+
+[101:46] File #2/16
+[101:46] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_2_Slot1-47_1_14596.d
+[104:38] 43303 library precursors are potentially detectable
+[104:38] Processing...
+[104:43] RT window set to 0.554954
+[104:43] Ion mobility window set to 0.0111335
+[104:43] Peak width: 3.324
+[104:43] Scan window radius set to 7
+[104:44] Recommended MS1 mass accuracy setting: 13.8865 ppm
+[105:04] Optimised mass accuracy: 22.3545 ppm
+[105:14] Removing low confidence identifications
+[105:14] Removing interfering precursors
+[105:15] Training neural networks: 42137 targets, 42058 decoys
+[105:18] Number of IDs at 0.01 FDR: 34561
+[105:20] Calculating protein q-values
+[105:20] Number of protein isoforms identified at 1% FDR: 4429 (precursor-level), 3867 (protein-level) (inference performed using proteotypic peptides only)
+[105:20] Quantification
+
+[105:25] File #3/16
+[105:25] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_3_Slot1-48_1_14597.d
+[106:47] 43303 library precursors are potentially detectable
+[106:47] Processing...
+[106:49] RT window set to 0.504237
+[106:49] Ion mobility window set to 0.0143012
+[106:49] Peak width: 3.408
+[106:49] Scan window radius set to 7
+[106:49] Recommended MS1 mass accuracy setting: 12.693 ppm
+[106:51] Optimised mass accuracy: 19.8408 ppm
+[106:52] Removing low confidence identifications
+[106:52] Removing interfering precursors
+[106:54] Training neural networks: 38148 targets, 35929 decoys
+[106:56] Number of IDs at 0.01 FDR: 21563
+[106:57] Calculating protein q-values
+[106:57] Number of protein isoforms identified at 1% FDR: 3558 (precursor-level), 3147 (protein-level) (inference performed using proteotypic peptides only)
+[106:57] Quantification
+
+[107:00] File #4/16
+[107:00] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel1_3mm_166ms_4_Slot1-49_1_14598.d
+[109:49] 43303 library precursors are potentially detectable
+[109:49] Processing...
+[109:52] RT window set to 0.556025
+[109:52] Ion mobility window set to 0.0113414
+[109:52] Peak width: 3.256
+[109:52] Scan window radius set to 7
+[109:52] Recommended MS1 mass accuracy setting: 13.8801 ppm
+[109:58] Optimised mass accuracy: 14.947 ppm
+[110:08] Removing low confidence identifications
+[110:08] Removing interfering precursors
+[110:09] Training neural networks: 42031 targets, 41206 decoys
+[110:13] Number of IDs at 0.01 FDR: 29761
+[110:14] Calculating protein q-values
+[110:14] Number of protein isoforms identified at 1% FDR: 4424 (precursor-level), 3997 (protein-level) (inference performed using proteotypic peptides only)
+[110:14] Quantification
+
+[110:19] File #5/16
+[110:19] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_1_Slot1-50_1_14603.d
+[113:02] 43303 library precursors are potentially detectable
+[113:02] Processing...
+[113:04] RT window set to 0.518283
+[113:04] Ion mobility window set to 0.0115531
+[113:04] Peak width: 3.304
+[113:04] Scan window radius set to 7
+[113:04] Recommended MS1 mass accuracy setting: 13.7868 ppm
+[113:05] Optimised mass accuracy: 26.5628 ppm
+[113:11] Removing low confidence identifications
+[113:11] Removing interfering precursors
+[113:13] Training neural networks: 40761 targets, 40684 decoys
+[113:16] Number of IDs at 0.01 FDR: 24145
+[113:17] Calculating protein q-values
+[113:17] Number of protein isoforms identified at 1% FDR: 3980 (precursor-level), 3547 (protein-level) (inference performed using proteotypic peptides only)
+[113:17] Quantification
+
+[113:22] File #6/16
+[113:22] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_2_Slot1-51_1_14604.d
+[115:35] 43303 library precursors are potentially detectable
+[115:35] Processing...
+[115:41] RT window set to 0.500355
+[115:41] Ion mobility window set to 0.012005
+[115:41] Peak width: 3.276
+[115:41] Scan window radius set to 7
+[115:41] Recommended MS1 mass accuracy setting: 13.7059 ppm
+[115:58] Optimised mass accuracy: 15.5967 ppm
+[116:07] Removing low confidence identifications
+[116:07] Removing interfering precursors
+[116:09] Training neural networks: 40209 targets, 37147 decoys
+[116:11] Number of IDs at 0.01 FDR: 26582
+[116:12] Calculating protein q-values
+[116:12] Number of protein isoforms identified at 1% FDR: 3998 (precursor-level), 3532 (protein-level) (inference performed using proteotypic peptides only)
+[116:12] Quantification
+
+[116:16] File #7/16
+[116:16] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_3_Slot1-52_1_14605.d
+[118:45] 43303 library precursors are potentially detectable
+[118:45] Processing...
+[118:52] RT window set to 0.516138
+[118:52] Ion mobility window set to 0.0129427
+[118:52] Peak width: 3.268
+[118:52] Scan window radius set to 7
+[118:52] Recommended MS1 mass accuracy setting: 13.071 ppm
+[119:09] Optimised mass accuracy: 13.496 ppm
+[119:18] Removing low confidence identifications
+[119:18] Removing interfering precursors
+[119:19] Training neural networks: 40545 targets, 37188 decoys
+[119:23] Number of IDs at 0.01 FDR: 27356
+[119:23] Calculating protein q-values
+[119:23] Number of protein isoforms identified at 1% FDR: 3949 (precursor-level), 3442 (protein-level) (inference performed using proteotypic peptides only)
+[119:23] Quantification
+
+[119:28] File #8/16
+[119:28] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel2_3mm_166ms_4_Slot1-53_1_14606.d
+[121:28] 43303 library precursors are potentially detectable
+[121:28] Processing...
+[121:32] RT window set to 0.493554
+[121:32] Ion mobility window set to 0.0129281
+[121:32] Peak width: 3.312
+[121:32] Scan window radius set to 7
+[121:32] Recommended MS1 mass accuracy setting: 13.7264 ppm
+[121:34] Optimised mass accuracy: 19.7443 ppm
+[121:35] Removing low confidence identifications
+[121:35] Removing interfering precursors
+[121:37] Training neural networks: 40069 targets, 38143 decoys
+[121:40] Number of IDs at 0.01 FDR: 25739
+[121:40] Calculating protein q-values
+[121:40] Number of protein isoforms identified at 1% FDR: 4001 (precursor-level), 3475 (protein-level) (inference performed using proteotypic peptides only)
+[121:40] Quantification
+
+[121:45] File #9/16
+[121:45] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_1_Slot1-54_1_14609.d
+[124:51] 43303 library precursors are potentially detectable
+[124:51] Processing...
+[124:54] RT window set to 0.550181
+[124:54] Ion mobility window set to 0.0114297
+[124:54] Peak width: 3.292
+[124:54] Scan window radius set to 7
+[124:54] Recommended MS1 mass accuracy setting: 13.8493 ppm
+[124:55] Optimised mass accuracy: 15.13 ppm
+[124:57] Removing low confidence identifications
+[124:57] Removing interfering precursors
+[124:59] Training neural networks: 42243 targets, 41004 decoys
+[125:02] Number of IDs at 0.01 FDR: 34137
+[125:03] Calculating protein q-values
+[125:03] Number of protein isoforms identified at 1% FDR: 4472 (precursor-level), 3859 (protein-level) (inference performed using proteotypic peptides only)
+[125:03] Quantification
+
+[125:08] File #10/16
+[125:08] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_2_Slot2-1_1_14610.d
+[127:44] 43303 library precursors are potentially detectable
+[127:44] Processing...
+[127:50] RT window set to 0.526171
+[127:50] Ion mobility window set to 0.0108329
+[127:50] Peak width: 3.284
+[127:50] Scan window radius set to 7
+[127:50] Recommended MS1 mass accuracy setting: 13.4159 ppm
+[128:03] Optimised mass accuracy: 21.198 ppm
+[128:05] Removing low confidence identifications
+[128:05] Removing interfering precursors
+[128:06] Training neural networks: 42153 targets, 41448 decoys
+[128:09] Number of IDs at 0.01 FDR: 33246
+[128:10] Calculating protein q-values
+[128:10] Number of protein isoforms identified at 1% FDR: 4384 (precursor-level), 3825 (protein-level) (inference performed using proteotypic peptides only)
+[128:10] Quantification
+
+[128:15] File #11/16
+[128:15] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_3_Slot2-2_1_14611.d
+[131:21] 43303 library precursors are potentially detectable
+[131:21] Processing...
+[131:27] RT window set to 0.542936
+[131:27] Ion mobility window set to 0.0110573
+[131:27] Peak width: 3.288
+[131:27] Scan window radius set to 7
+[131:27] Recommended MS1 mass accuracy setting: 13.742 ppm
+[131:45] Optimised mass accuracy: 15.6137 ppm
+[131:54] Removing low confidence identifications
+[131:54] Removing interfering precursors
+[131:56] Training neural networks: 42254 targets, 41298 decoys
+[132:00] Number of IDs at 0.01 FDR: 32387
+[132:01] Calculating protein q-values
+[132:01] Number of protein isoforms identified at 1% FDR: 4404 (precursor-level), 3989 (protein-level) (inference performed using proteotypic peptides only)
+[132:01] Quantification
+
+[132:06] File #12/16
+[132:06] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel3_3mm_166ms_4_Slot2-3_1_14612.d
+[135:19] 43303 library precursors are potentially detectable
+[135:19] Processing...
+[135:26] RT window set to 0.54079
+[135:26] Ion mobility window set to 0.0109893
+[135:26] Peak width: 3.28
+[135:26] Scan window radius set to 7
+[135:26] Recommended MS1 mass accuracy setting: 13.8929 ppm
+[135:45] Optimised mass accuracy: 14.8687 ppm
+[135:55] Removing low confidence identifications
+[135:55] Removing interfering precursors
+[135:57] Training neural networks: 42243 targets, 40659 decoys
+[136:00] Number of IDs at 0.01 FDR: 34127
+[136:01] Calculating protein q-values
+[136:01] Number of protein isoforms identified at 1% FDR: 4429 (precursor-level), 3872 (protein-level) (inference performed using proteotypic peptides only)
+[136:01] Quantification
+
+[136:06] File #13/16
+[136:06] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_1_Slot2-4_1_14615.d
+[139:14] 43303 library precursors are potentially detectable
+[139:14] Processing...
+[139:20] RT window set to 0.516489
+[139:20] Ion mobility window set to 0.0111398
+[139:20] Peak width: 3.404
+[139:20] Scan window radius set to 7
+[139:20] Recommended MS1 mass accuracy setting: 13.5525 ppm
+[139:38] Optimised mass accuracy: 14.5558 ppm
+[139:47] Removing low confidence identifications
+[139:47] Removing interfering precursors
+[139:49] Training neural networks: 41595 targets, 39600 decoys
+[139:52] Number of IDs at 0.01 FDR: 30185
+[139:53] Calculating protein q-values
+[139:53] Number of protein isoforms identified at 1% FDR: 4212 (precursor-level), 3708 (protein-level) (inference performed using proteotypic peptides only)
+[139:53] Quantification
+
+[139:58] File #14/16
+[139:58] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_2_Slot2-5_1_14616.d
+[142:42] 43303 library precursors are potentially detectable
+[142:42] Processing...
+[142:48] RT window set to 0.537563
+[142:48] Ion mobility window set to 0.0109616
+[142:48] Peak width: 3.264
+[142:48] Scan window radius set to 7
+[142:48] Recommended MS1 mass accuracy setting: 13.9506 ppm
+[143:07] Optimised mass accuracy: 17.4816 ppm
+[143:17] Removing low confidence identifications
+[143:17] Removing interfering precursors
+[143:19] Training neural networks: 42282 targets, 40960 decoys
+[143:21] Number of IDs at 0.01 FDR: 34324
+[143:22] Calculating protein q-values
+[143:22] Number of protein isoforms identified at 1% FDR: 4443 (precursor-level), 3988 (protein-level) (inference performed using proteotypic peptides only)
+[143:22] Quantification
+
+[143:28] File #15/16
+[143:28] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_3_Slot2-6_1_14617.d
+[147:01] 43303 library precursors are potentially detectable
+[147:01] Processing...
+[147:07] RT window set to 0.542256
+[147:07] Ion mobility window set to 0.0116927
+[147:07] Peak width: 3.3
+[147:07] Scan window radius set to 7
+[147:07] Recommended MS1 mass accuracy setting: 14.3457 ppm
+[147:24] Optimised mass accuracy: 14.9469 ppm
+[147:33] Removing low confidence identifications
+[147:33] Removing interfering precursors
+[147:35] Training neural networks: 42070 targets, 41289 decoys
+[147:38] Number of IDs at 0.01 FDR: 29221
+[147:39] Calculating protein q-values
+[147:39] Number of protein isoforms identified at 1% FDR: 4146 (precursor-level), 3586 (protein-level) (inference performed using proteotypic peptides only)
+[147:39] Quantification
+
+[147:45] File #16/16
+[147:45] Loading run \\172.16.13.136\share\members\Dongzhen\ProteomEx2_benchmark\Homogenization_conditions\N20220811dongzhen_ProteomEx2_220803_04_batch\N20220811dongzhen_Gel4_3mm_166ms_4_Slot2-7_1_14618.d
+[150:48] 43303 library precursors are potentially detectable
+[150:48] Processing...
+[150:54] RT window set to 0.551628
+[150:54] Ion mobility window set to 0.0114948
+[150:54] Peak width: 3.22
+[150:54] Scan window radius set to 7
+[150:54] Recommended MS1 mass accuracy setting: 14.1434 ppm
+[151:16] Optimised mass accuracy: 22.0119 ppm
+[151:27] Removing low confidence identifications
+[151:27] Removing interfering precursors
+[151:29] Training neural networks: 42017 targets, 41917 decoys
+[151:32] Number of IDs at 0.01 FDR: 33434
+[151:33] Calculating protein q-values
+[151:33] Number of protein isoforms identified at 1% FDR: 4402 (precursor-level), 3891 (protein-level) (inference performed using proteotypic peptides only)
+[151:33] Quantification
+
+[151:39] Cross-run analysis
+[151:39] Reading quantification information: 16 files
+[151:41] Averaged recommended settings for this experiment: Mass accuracy = 21ppm, MS1 accuracy = 14ppm, Scan window = 7
+[151:41] Quantifying peptides
+[151:43] Quantifying proteins
+[151:46] Calculating q-values for protein and gene groups
+[151:46] Calculating global q-values for protein and gene groups
+[151:46] Writing report
+[152:16] Report saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report.tsv.
+[152:16] Saving precursor levels matrix
+[152:17] Precursor levels matrix (1% precursor and protein group FDR) saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report.pr_matrix.tsv.
+[152:17] Saving protein group levels matrix
+[152:17] Protein group levels matrix (1% precursor FDR and protein group FDR) saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report.pg_matrix.tsv.
+[152:17] Saving gene group levels matrix
+[152:17] Gene groups levels matrix (1% precursor FDR and protein group FDR) saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report.gg_matrix.tsv.
+[152:17] Saving unique genes levels matrix
+[152:17] Unique genes levels matrix (1% precursor FDR and protein group FDR) saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report.unique_genes_matrix.tsv.
+[152:17] Stats report saved to F:\Dongzhen\ProteomEx_v2\N20230317dongz_ProteomEx2_homogenization_condition\Homogenization_report.stats.tsv
+
+Finished
+
