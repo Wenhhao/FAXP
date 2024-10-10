@@ -159,7 +159,8 @@ ggsave('SF3C_missed_cleavage.pdf', plotS3C, width = 10, height = 7)
 tblS3D <- df2pep %>%
   inner_join(fileinfo2) %>% 
   distinct(`Name used in the image`, Peptide, `Peptide Length`) %>% 
-  count(`Name used in the image`, `Peptide Length`)
+  count(`Name used in the image`, `Peptide Length`) %>% 
+  mutate(`Name used in the image` = factor(`Name used in the image`, levels = levels(tblS3B$`Name used in the image`)))
 
 plotS3D <- ggplot(tblS3D, aes(x = `Peptide Length`, y = n, color = `Name used in the image`, fill = `Name used in the image`)) +
   geom_point(size = 2) +
@@ -278,7 +279,8 @@ ggsave('SF4C_missed_cleavage.pdf', plotS4C, width = 10, height = 7)
 tblS4D <- df3pep %>%
   inner_join(fileinfo3) %>% 
   distinct(`Name used in the image`, Peptide, `Peptide Length`) %>% 
-  count(`Name used in the image`, `Peptide Length`)
+  count(`Name used in the image`, `Peptide Length`) %>% 
+  mutate(`Name used in the image` = factor(`Name used in the image`, levels = levels(tblS4B$`Name used in the image`)))
 
 plotS4D <- ggplot(tblS4D, aes(x = `Peptide Length`, y = n, color = `Name used in the image`, fill = `Name used in the image`)) +
   geom_point(size = 2) +
@@ -836,23 +838,23 @@ tblS10B <- X %>% as.data.frame() %>% rownames_to_column('Protein')
 
 # Output ------------------------------------------------------------------
 list(
-  FigureS1AB = tblS1AB,
-  FigureS1C = tblS1C,
-  FigureS3B = tblS3B,
-  FigureS3C = tblS3C,
-  FigureS3D = tblS3D,
-  FigureS4B = tblS4B,
-  FigureS4C = tblS4C,
-  FigureS4D = tblS4D,
-  FigureS9A = tblS9A,
-  FigureS9B_peptide = tblS9B_peptide,
-  FigureS9B_protein = tblS9B_protein,
-  FigureS9D = tblS9D,
-  FigureS9E = tblS9E,
-  FigureS9F = tblS9F,
-  FigureS10B = tblS10B,
-  FigureS11A = tblS11A,
-  FigureS11B = tblS11B
+  SFigure1AB = tblS1AB,
+  SFigure1C = tblS1C,
+  SFigure3B = tblS3B,
+  SFigure3C = tblS3C,
+  SFigure3D = tblS3D,
+  SFigure4B = tblS4B,
+  SFigure4C = tblS4C,
+  SFigure4D = tblS4D,
+  SFigure9A = tblS9A,
+  SFigure9B_peptide = tblS9B_peptide,
+  SFigure9B_protein = tblS9B_protein,
+  SFigure9D = tblS9D,
+  SFigure9E = tblS9E,
+  SFigure9F = tblS9F,
+  SFigure10B = tblS10B,
+  SFigure11A = tblS11A,
+  SFigure11B = tblS11B
 ) %>%
   rio::export('Source_data_SF1_3_4_9_10_11.xlsx')
 
